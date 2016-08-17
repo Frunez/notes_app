@@ -1,20 +1,18 @@
+// document.addEventListener('DOMContentLoaded', function(){
 (function(exports) {
-  function NoteController(noteList) {
-    this._noteList = noteList
-    this.element;
+  function NoteController(noteview) {
+    this._noteview = noteview;
+  }
+
+  NoteController.prototype.displayNotesList = function() {
+      var element = document.getElementById('app');
+      element.innerHTML = this._noteview.returnListAsHTML();
+      // console.log(element.innerHTML);
+    // });
   };
-
-    NoteController.prototype.displayNotesList = function() {
-
-
-        this.element.innerHTML = '<h1>three bananas</h1>';
-        // console.log(element.innerHTML);
-
-    };
-
-    document.addEventListener('DOMContentLoaded', function(){
-      this.element = document.getElementById('app');
-    });
 
   exports.NoteController = NoteController;
 })(this);
+
+// var notecontroller = new NoteController("Why not work?");
+// notecontroller.displayNotesList();
