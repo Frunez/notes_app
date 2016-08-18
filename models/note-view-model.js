@@ -1,3 +1,4 @@
+// var NoteList = require('./note-list-model');
 (function(exports) {
   function NoteView(noteList) {
     this._noteList = noteList;

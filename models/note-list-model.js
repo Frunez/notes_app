@@ -15,8 +15,4 @@
   };
 
   exports.NoteList = NoteList;
-  // exports.addNoteToNotes = addNoteToNotes;
-  // exports.getNotes = getNotes;
 })(this);
-
-// module.exports = NoteList;

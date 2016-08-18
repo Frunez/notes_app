@@ -1,3 +1,4 @@
+
 var notelist = new NoteList();
 notelist.addNoteToNotes('Hi');
 notelist.addNoteToNotes('Very Nice');

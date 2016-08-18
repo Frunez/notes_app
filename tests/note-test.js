@@ -1,20 +1,12 @@
-//
-// function isTrue(assertionToCheck) {
-//   if (!assertionToCheck) {
-//     throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
-//   }
-//   return console.log("Nice!");
-// }
 
-// 
-// var Assert = require("./assert");
-// var Note   = require("../models/note-model");
 var assert = new Assert();
 
 
 function noteTakesTextUponInstantiation() {
   var note = new Note("hello");
-  assert.isTrue(note._text !== null);
+  if (assert.isTrue(note._text !== null) == "Nice!") {
+    return "Note takes text upon instantiation";
+  }
 }
 
 noteTakesTextUponInstantiation();

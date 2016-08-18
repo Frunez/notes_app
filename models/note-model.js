@@ -10,4 +10,3 @@
   };
   exports.Note = Note;
 })(this);
-// module.exports = Note;
