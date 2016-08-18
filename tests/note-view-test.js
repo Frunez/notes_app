@@ -8,28 +8,22 @@ for (i=0; i<3; i++){
   noteList.addNoteToNotes("example");
 }
 
-function takesNoteListUponInstantiation() {
+it('takesNoteListUponInstantiation', function takesNoteListUponInstantiation() {
   assert.isTrue(noteView !== null);
-}
-takesNoteListUponInstantiation();
+});
 
-function returnsNoteListAsHTML() {
+it('returnsNoteListAsHTML', function returnsNoteListAsHTML() {
   assert.isTrue(noteView.returnListAsHTML() == htmlString);
-}
+});
 
-returnsNoteListAsHTML();
-
-function canTakeListWithoutNotes() {
+it('canTakeListWithoutNotes', function canTakeListWithoutNotes() {
   var noteView = new NoteView(new NoteList());
   assert.isTrue(noteView.returnListAsHTML() == "<ul></ul>" );
+});
 
-}
-canTakeListWithoutNotes();
-
-  function canTakeListWithOneNote(){
+  it('canTakeListWithOneNote', function canTakeListWithOneNote(){
     var noteList = new NoteList();
     noteList.addNoteToNotes("hello");
     var noteView = new NoteView(noteList);
     assert.isTrue(noteView.returnListAsHTML() == "<ul><li><div>hello</div></li></ul>");
-  }
-canTakeListWithOneNote();
+  });

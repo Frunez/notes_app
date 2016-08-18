@@ -1,5 +1,5 @@
 
-function storesArrayOfNoteModels(){
+it('stores an array of note models', function storesArrayOfNoteModels(){
   var noteList = new NoteList();
   for (i = 0; i < 3; i++){
     var note = new Note("note" + i);
@@ -8,11 +8,9 @@ function storesArrayOfNoteModels(){
   result = assert.isTrue(noteList._notes.length == 3);
   var string = "it stores array of note objects";
   // test.info(result, string);
-}
+});
 
-storesArrayOfNoteModels();
-
-function returnListOfNotes(){
+it('returns list of note objects', function returnListOfNotes(){
   var noteList = new NoteList();
   for (i = 0; i < 3; i++){
     var text = ('note' + i);
@@ -21,6 +19,4 @@ function returnListOfNotes(){
   result = assert.isTrue(noteList.getNotes()[2].getText() == 'note2');
   var string = "it returns list of notes";
   // test.info(result, string);
-}
-
-returnListOfNotes();
+});

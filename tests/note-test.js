@@ -4,9 +4,7 @@ it('it takes note upon instantiation', function () {
 });
 
 
-// function hasMethodToReturnText(){
-//   var note = new Note("what's up");
-//   assert.isTrue(note.getText() == "what's up");
-// }
-//
-// hasMethodToReturnText();
+it('it returns txt of saved note object', function () {
+  var note = new Note("what's up");
+  assert.isTrue(note.getText() == "what's up");
+});
