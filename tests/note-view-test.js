@@ -1,5 +1,4 @@
 
-var assert = new Assert();
 var noteList = new NoteList();
 var noteView = new NoteView(noteList);
 

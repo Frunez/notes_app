@@ -1,25 +1,34 @@
 (function(exports) {
-  function Assert(){
+
+  function isTrue(assertionToCheck) {
+    if (!assertionToCheck) {
+      throw new Error("Assertion failed: " + assertionToCheck + " is not truthy", true);
+    }
+    // return true;
   }
 
-  Assert.prototype = {
-    isTrue: function(assertionToCheck) {
-      if (!assertionToCheck) {
-        throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
-      }
-      return console.log("Nice!");
-    }
-  };
+  function it(spec, block) {
+    try {
+     createListElement(spec, "h5");
+     block();
+     createListElement("Passed test", "p", "green");
+     } catch (error) {
+      createListElement(error, "p", "red");
+     }
+    }
 
-  // Assert.prototype = {
-  //   info: function(result, string) {
-  //     if (result == "Nice!") {
-  //       return "<style color = 'green'></style>" + string + ": Passed!<br>";
-  //     }
-  //     return "<style color = 'red'></style>" + string + ": failed :( (check console log for more info)<br>";
-  //   }
-  // };
+  function specList(result, color, tag) {
+    var div = document.getElementById('test');
+    var element = document.createElement(tag);
+    div.appendChild(element);
+    if (color === "green")
+      element.setAttribute('class', 'success');
+    else if (color === "red")
+      element.setAttribute('class', 'failed');
+    else
+      element.setAttribute('class', 'black');
+  }
 
-  exports.Assert = Assert;
-
+  exports.assert = {isTrue: isTrue};
+  exports.it = it;
 })(this);

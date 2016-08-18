@@ -1,13 +1,7 @@
-
-var assert = new Assert();
-
-
-function noteTakesTextUponInstantiation() {
+it('it takes note upon instantiation', function noteTakesTextUponInstantiation() {
   var note = new Note("hello");
-  if (assert.isTrue(note._text !== null) == "Nice!") {
-    return "Note takes text upon instantiation";
-  }
-}
+  assert.isTrue(note._text !== null);
+});
 
 noteTakesTextUponInstantiation();
 
