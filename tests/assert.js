@@ -9,17 +9,18 @@
 
   function it(spec, block) {
     try {
-     createListElement(spec, "h5");
+     specList(spec, "h5");
      block();
-     createListElement("Passed test", "p", "green");
+     specList("Passed test", "p", "green");
      } catch (error) {
-      createListElement(error, "p", "red");
+      specList(error, "p", "red");
      }
     }
 
-  function specList(result, color, tag) {
+  function specList(result, tag, color) {
     var div = document.getElementById('test');
     var element = document.createElement(tag);
+    element.appendChild(document.createTextNode(result));
     div.appendChild(element);
     if (color === "green")
       element.setAttribute('class', 'success');
