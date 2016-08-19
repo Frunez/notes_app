@@ -25,5 +25,5 @@ it('returns a list of notes each limited to 20 char', function(){
   var noteList20Char = new NoteList();
   noteList20Char.addNoteToNotes('it returns list of notes');
   var noteView20Char = new NoteView(noteList20Char);
-  assert.isTrue(noteView20Char.returnListAsHTML().length === 49);
+  assert.isTrue(noteView20Char.returnListAsHTML().length === 64);
 });

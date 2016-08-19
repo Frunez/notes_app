@@ -7,7 +7,7 @@
     returnListAsHTML: function() {
       var htmlString ="<ul>";
       for(i=0;i<this._noteList.getNotes().length;i++) {
-        htmlString += "<li><div>" + this._noteList.getNotes()[i].getText().substring(0,20) + "</div></li>";
+        htmlString += "<li><div><a href=#" + i + ">" + this._noteList.getNotes()[i].getText().substring(0,20) + "</a>" + "</div></li>";
       }
       return htmlString += "</ul>";
     }

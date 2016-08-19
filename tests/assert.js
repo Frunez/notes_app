@@ -12,7 +12,7 @@
     var element = document.createElement(tag);
     element.appendChild(document.createTextNode(result));
     div.appendChild(element);
-    if (color === "green")
+    if (color === "blue")
     element.setAttribute('class', 'success');
     else if (color === "red")
     element.setAttribute('class', 'failed');
@@ -22,9 +22,9 @@
 
   function it(spec, block) {
     try {
-     specList(spec, "h5");
+     specList(spec, "p");
      block();
-     specList("Passed test", "p", "green");
+     specList("passed test", "p", "blue");
      } catch (error) {
       specList(error, "p", "red");
      }

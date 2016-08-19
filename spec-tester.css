@@ -4,12 +4,12 @@ h4, h5 {
 }
 p {
   padding: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 1px;
   margin: 0px;
 }
 .failed {
   color: red;
 }
 .success {
-  color: green;
+  color: blue;
 }
